@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.loemin.pan.mapper.SourceFileMapper">
+
+    <resultMap id="BaseResultMap" type="com.loemin.pan.model.SourceFile">
+            <id property="id" column="id" jdbcType="BIGINT"/>
+            <result property="md5" column="md5" jdbcType="VARCHAR"/>
+            <result property="path" column="path" jdbcType="VARCHAR"/>
+            <result property="size" column="size" jdbcType="INTEGER"/>
+            <result property="referenceCount" column="reference_count" jdbcType="INTEGER"/>
+            <result property="createTime" column="create_time" jdbcType="TIMESTAMP"/>
+            <result property="updateTime" column="update_time" jdbcType="TIMESTAMP"/>
+    </resultMap>
+
+    <sql id="Base_Column_List">
+        id,md5,path,
+        size,reference_count,create_time,
+        update_time
+    </sql>
+</mapper>
